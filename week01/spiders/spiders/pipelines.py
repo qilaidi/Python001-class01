@@ -15,5 +15,5 @@ class SpidersPipeline:
         movie_date = item["movie_date"]
         with open("./maoyan_movie.csv", "a+", encoding="utf-8") as movie_file:
             movie_type_str = "/".join(movie_type)
-            movie_file.write(f"类型：{movie_type_str}\t片名：《{movie_name}》\t 上映日期：{movie_date}\n")
+            movie_file.write(f"类型：{movie_type_str}, 片名：《{movie_name}》, 上映日期：{movie_date}\n")  # 逗号分割
         return item
