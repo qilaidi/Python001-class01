@@ -16,9 +16,6 @@ class MoviesSpider(scrapy.Spider):
         yield scrapy.Request(url=self.base_url+uri, callback=self.parse)
 
     def parse(self, response):
-        Cookie = response.headers.getlist('Set-Cookie')
-        print(Cookie)
-
         movies = Selector(response).xpath('//div[@class="movie-item film-channel"]')[:10]
         for movie in movies:
             uri = movie.xpath("./a/@href").extract_first()
