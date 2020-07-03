@@ -8,12 +8,22 @@
 from itemadapter import ItemAdapter
 
 
+import os
+import sys
+
+from DBOperator import DBOperator
+
+print("当前的工作目录：" + os.getcwd())
+print("python搜索模块的路径集合：", sys.path)
+
+
+
 class SpidersPipeline:
     def process_item(self, item, spider):
         movie_name = item["movie_name"]
         movie_type = item["movie_type"]
         movie_date = item["movie_date"]
-        with open("./maoyan_movie.csv", "a+", encoding="utf-8") as movie_file:
-            movie_type_str = "/".join(movie_type)
-            movie_file.write(f"类型：{movie_type_str}, 片名：《{movie_name}》, 上映日期：{movie_date}\n")  # 逗号分割
+        movie_type_str = "/".join(movie_type)
+        sql = """INSERT INTO movies (name, type, release_date) VALUES ({movie_name}, {movie_type_str}, {movie_date})"""
+        DBOperator.run(sql)
         return item
