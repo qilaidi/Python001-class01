@@ -1,6 +1,6 @@
 import pymysql
 
-import dbinfo
+from spiders import dbinfo
 
 import os
 import sys
@@ -17,7 +17,7 @@ print("python搜索模块的路径集合：", sys.path)
 #     -> release_date DATETIME
 #     -> );
 
-class DBOperator(object):
+class DBOperation(object):
     @classmethod
     def run(cls, sql):
         conn = pymysql.connect(host=dbinfo.HOST,
@@ -37,6 +37,6 @@ class DBOperator(object):
 
 
 if __name__ == "__main__":
-    db = DBOperator()
+    db = DBOperation()
     db.run()
 

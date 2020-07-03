@@ -7,15 +7,13 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
-
 import os
 import sys
 
-from DBOperator import DBOperator
+from spiders.DBOperator import DBOperation as db
 
 print("当前的工作目录：" + os.getcwd())
 print("python搜索模块的路径集合：", sys.path)
-
 
 
 class SpidersPipeline:
@@ -24,6 +22,9 @@ class SpidersPipeline:
         movie_type = item["movie_type"]
         movie_date = item["movie_date"]
         movie_type_str = "/".join(movie_type)
-        sql = """INSERT INTO movies (name, type, release_date) VALUES ({movie_name}, {movie_type_str}, {movie_date})"""
-        DBOperator.run(sql)
+        sql = """INSERT INTO movies (name, type, release_date) 
+        VALUES ({movie_name}, {movie_type_str}, {movie_date})"""
+        db.run(sql)
+        print("insert db !")
         return item
+
