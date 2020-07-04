@@ -1,9 +1,14 @@
+import traceback
+
 import pymysql
 
 from spiders import dbinfo
 
 import os
 import sys
+
+from pymysql import DatabaseError
+
 print("当前的工作目录：" + os.getcwd())
 print("python搜索模块的路径集合：", sys.path)
 
@@ -14,7 +19,7 @@ print("python搜索模块的路径集合：", sys.path)
 #     -> id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 #     -> name VARCHAR(100),
 #     -> type VARCHAR(200),
-#     -> release_date DATETIME
+#     -> release_date DATE
 #     -> );
 
 class DBOperation(object):
@@ -28,15 +33,21 @@ class DBOperation(object):
         cur = conn.cursor()
         try:
             cur.execute(sql)
-            print(cur.fetchall())
             cur.close()
             conn.commit()
-        except:
+            print("insert db !")
+        except DatabaseError as e:
+            print(e)
             conn.rollback()
         conn.close()
 
 
 if __name__ == "__main__":
     db = DBOperation()
-    db.run()
+    movie_name = '天气之子'
+    movie_type = [' 爱情 ', ' 动画 ', ' 奇幻 ']
+    movie_type_str = "/".join(movie_type)
+    movie_date = '2019-11-01'
+    sql = f"""INSERT INTO movies (name, type, release_date) VALUES ({movie_name}, '{movie_type_str}', '{movie_date}');"""
+    db.run(sql)
 

@@ -22,9 +22,7 @@ class SpidersPipeline:
         movie_type = item["movie_type"]
         movie_date = item["movie_date"]
         movie_type_str = "/".join(movie_type)
-        sql = """INSERT INTO movies (name, type, release_date) 
-        VALUES ({movie_name}, {movie_type_str}, {movie_date})"""
+        sql = f"""INSERT INTO movies (name, type, release_date) VALUES ('{movie_name}', '{movie_type_str}', '{movie_date}');"""
         db.run(sql)
-        print("insert db !")
         return item
 
