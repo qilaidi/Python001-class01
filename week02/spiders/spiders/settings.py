@@ -66,9 +66,14 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'spiders.middlewares.SpidersDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'spiders.middlewares.SpidersDownloaderMiddleware': 543,
+    'spiders.middlewares.RandomHttpProxyMiddleware': 400,
+}
+
+HTTP_PROXY_LIST = [
+     'http://52.179.231.206:80',
+]
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html

@@ -11,7 +11,7 @@ try:
     browser.find_element_by_xpath('//input[@name="password"]').send_keys("test123!")
     browser.find_element_by_xpath('//button[@type="black"]').click()
     browser.implicitly_wait(10)
-    sleep(1)
+    browser.find_element_by_xpath('//*[@href="/dashboard/favorites"]').click()
 except Exception as e:
     print(e)
 finally:
