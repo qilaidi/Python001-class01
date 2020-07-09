@@ -59,8 +59,9 @@ if __name__ == "__main__":
     start = datetime.datetime.now()
     print(test.multi_threads(4, 'self.scan_port', range(1083, 3307)))
     end = datetime.datetime.now()
-    print("-" * 10 + "多线程结束" + "-" * 10)
     print(end - start)
+    print("-" * 10 + "多线程结束" + "-" * 10)
+
     # 单线程
     print("-" * 10 + "单线程开始" + "-" * 10)
     start = datetime.datetime.now()
@@ -71,8 +72,9 @@ if __name__ == "__main__":
             result.append(res)
     print(result)
     end = datetime.datetime.now()
-    print("-" * 10 + "单线程结束" + "-" * 10)
     print(end - start)
+    print("-" * 10 + "单线程结束" + "-" * 10)
+
     # 多进程
     print("-" * 10 + "多进程开始" + "-" * 10)
     start = datetime.datetime.now()
