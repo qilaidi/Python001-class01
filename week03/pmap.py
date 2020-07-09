@@ -26,53 +26,6 @@ def timer(name):
         return wrapper
     return decorate
 
-def test_scan_ports():
-    ip = '127.0.0.1'
-    test = PMap(ip)
-    # 多线程
-
-    print(test.multi_threads(4, 'self.scan_port', range(1083, 3307)))
-
-    # 单线程
-    print("-" * 10 + "单线程开始" + "-" * 10)
-    start = datetime.datetime.now()
-    result = []
-    for i in range(1083, 3307):
-        res = test.scan_port(i)
-        if res:
-            result.append(res)
-    print(result)
-    end = datetime.datetime.now()
-    print(end - start)
-    print("-" * 10 + "单线程结束" + "-" * 10)
-
-    # 多进程
-
-    print(test.multi_process(4, 'self.scan_port', range(1083, 3307)))
-
-def test_scan_ips():
-    ip = '127.0.0.1'
-    test = PMap(ip)
-    # 多线程
-
-    print(test.multi_threads(4, 'self.scan_port', range(1083, 3307)))
-
-    # 单线程
-    print("-" * 10 + "单线程开始" + "-" * 10)
-    start = datetime.datetime.now()
-    result = []
-    for i in range(1083, 3307):
-        res = test.scan_port(i)
-        if res:
-            result.append(res)
-    print(result)
-    end = datetime.datetime.now()
-    print(end - start)
-    print("-" * 10 + "单线程结束" + "-" * 10)
-
-    # 多进程
-
-    print(test.multi_process(4, 'self.scan_port', range(1083, 3307)))
 
 class PMap:
     def agent_call(self, params):
@@ -82,8 +35,8 @@ class PMap:
         m = 'self.multi_process' if (params_map['-m'] and params_map['-m']=='proc') else 'self.multi_threads'
         if params_map['-f'] == 'tcp':
             if params_map['-ip']:
-                temp = f"{m}(n, 'self.scan_port', [(params_map['-ip'], port) for port in range(1083, 3307)])"
-                result = eval(m + r"(n, 'self.scan_port', [(params_map['-ip'], port) for port in range(1083, 3307)])")
+                seed = [(params_map["-ip"], port) for port in range(1083, 3307)]
+                result = eval(f'{m}(n, "self.scan_port", seed)')
         elif params_map['-f'] == 'ping':
             if params_map['-ip']:
                 ips = params_map['-ip']
@@ -154,10 +107,7 @@ class PMap:
 
 
 if __name__ == "__main__":
-    # test_funcs()
-    # params = sys.argv
-    params = ['pmap.py', '-n', '5', '-f', 'tcp', '-ip', '127.0.0.1', '-w', 'result.json']
-    # params = ['pmap.py', '-n', '5', '-f', 'ping', '-ip', '172.22.34.237-172.22.34.242', '-w', 'result.json', '-m', 'proc']
+    params = sys.argv
     test = PMap()
     print(test.agent_call(params))
 
