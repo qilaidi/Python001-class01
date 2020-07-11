@@ -30,29 +30,34 @@ def timer(name):
 class PMap:
     def agent_call(self, params):
         params_map, result = self.handle_params(params), None
-        print(type(params_map))
+
+        # 初始化Pool大小和多任务方式参数，如果没有给予默认值
         n = int(params_map['-n']) if params_map['-n'] else 4
-        m = 'self.multi_process' if (params_map['-m'] and params_map['-m']=='proc') else 'self.multi_threads'
+        m = 'self._multi_process' if (params_map['-m'] and params_map['-m']=='proc') else 'self._multi_threads'
+
+        # 扫描端口
         if params_map['-f'] == 'tcp':
             if params_map['-ip']:
-                seed = [(params_map["-ip"], port) for port in range(1083, 3307)]
-                result = eval(f'{m}(n, "self.scan_port", seed)')
+                seed = [(params_map["-ip"], port) for port in range(0, 65536)]
+                result = eval(f'{m}(n, "self._scan_port", seed)')
+        # ping ip
         elif params_map['-f'] == 'ping':
             if params_map['-ip']:
                 ips = params_map['-ip']
                 ips = self.handle_ips(ips)
-                result = eval(m + "(n, 'self.ping', ips)")
-        if params_map['-w']:
-            self.save_to_file(result, params_map['-w'])
+                result = eval(m + "(n, 'self._ping', ips)")
+        # 保存文件
+        if params_map['-w'] and result:
+            self._save_to_file(result, params_map['-w'])
         return result
 
-    def ping(self, ip):
+    def _ping(self, ip):
         param = '-n' if platform.system().lower() == 'windows' else '-c'
         timeout = '-t' if platform.system().lower() == 'darwin' else '-w'
         command = ['ping', param, '1', ip, timeout, '1']
         return ip if not subprocess.call(command) else None
 
-    def scan_port(self, address):
+    def _scan_port(self, address):
         try:
             s = socket.create_connection(address, 0.0000000000002)
             s.close()
@@ -61,7 +66,7 @@ class PMap:
             pass
             # print(f"{port} is closed on server {self.host}\n")
 
-    def save_to_file(self, result, file_path):
+    def _save_to_file(self, result, file_path):
         """
         :param result: string content to write to file
         :param file_path:
@@ -71,13 +76,13 @@ class PMap:
             f.write(" | ".join(str(line) for line in result))
 
     @timer("多线程")
-    def multi_threads(self, n, f, seed):
+    def _multi_threads(self, n, f, seed):
         with ThreadPoolExecutor(n) as pool:
             result = pool.map(eval(f), seed)
         return list([i for i in result if i])
 
     @timer("多进程")
-    def multi_process(self, n, f, seed):
+    def _multi_process(self, n, f, seed):
         pool = Pool(n)
         result = pool.map(eval(f), seed)
         pool.close()
