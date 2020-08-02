@@ -25,21 +25,7 @@
 
 <body>
     <div id="wrapper">
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <!-- /.navbar-header -->
-                <!-- /.dropdown -->
-                <li class="sidebar-search">
-                    <div class="input-group custom-search-form">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </span>
-                    </div>
-                </li>
-        </nav>
-         {% block content %} {% endblock %}
+        {% block content %} {% endblock %}
     </div>
     {% block js %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
