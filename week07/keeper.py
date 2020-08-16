@@ -1,4 +1,4 @@
-from abc import ABCMeta
+from abc import ABCMeta, abstractmethod
 from enum import Enum
 
 
@@ -26,6 +26,7 @@ class Animal(metaclass=ABCMeta):
             return True
         return False
 
+    @abstractmethod
     def __init__(self, name, animal_type, animal_size, animal_character):
         self.name = name
         self.animal_size = animal_size
@@ -53,5 +54,7 @@ if __name__ == '__main__':
     cat1 = Cat('大花猫 1', '食肉', '小', '温顺')
     # 增加一只猫到动物园
     z.add_animal(cat1)
+    z.add_animal(cat1)
     # 动物园是否有猫这种动物
     have_cat = getattr(z, 'Cat')
+    print(have_cat)
