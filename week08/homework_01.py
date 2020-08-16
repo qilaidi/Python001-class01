@@ -38,3 +38,12 @@ is_editable(example_tuple)
 is_editable(example_str)
 is_editable(example_dict)
 is_editable(example_deque)
+
+"""
+执行结果：
+list is mutable
+tuple is immutable
+str is immutable
+dict is mutable
+deque is mutable
+"""

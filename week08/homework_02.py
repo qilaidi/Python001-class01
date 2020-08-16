@@ -2,6 +2,7 @@
 作业二：
 自定义一个 python 函数，实现 map() 函数的功能。
 """
+import pytest
 
 
 def fake_map(func, *iter_thing):
@@ -28,4 +29,13 @@ def test_fake_map_3(arg1, arg2, arg3):
 if __name__ == '__main__':
     print(list(fake_map(test_fake_map_1, [1, 2, 3])))
     list(fake_map(test_fake_map_2, ["hello", "你好"], ["world", "世界"]))
-    list(fake_map(test_fake_map_3, ["hello", "你好"], ["world", "世界"], ["!", "！"]))
+    list(fake_map(test_fake_map_3, ["hello", "你好"], ["world", "世界"], [".", "。"]))
+
+"""
+执行结果：
+[2, 4, 6]
+hello, world!
+你好, 世界!
+hello, world.
+你好, 世界。
+"""

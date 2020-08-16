@@ -26,4 +26,10 @@ def test_func(sleep_time):
 
 
 if __name__ == '__main__':
-    print(test_func(10))
+    print(test_func(5))
+
+"""
+执行结果：
+函数的运行时间: 0:00:05.004378
+5
+"""
