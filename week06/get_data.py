@@ -1,7 +1,7 @@
 import requests, re
 from bs4 import BeautifulSoup as bs
 
-from week06.DBOperator import DBOperation
+from week06.db_operator import DBOperation
 
 
 def get_page_content():
