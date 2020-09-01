@@ -1177,3 +1177,92 @@
  'scheduler/enqueued/memory': 11,
  'start_time': datetime.datetime(2020, 9, 1, 11, 3, 3, 134813)}
 2020-09-01 19:03:17 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-09-01 22:06:08 [scrapy.utils.log] INFO: Scrapy 2.1.0 started (bot: smzdm)
+2020-09-01 22:06:08 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.21.0, Twisted 20.3.0, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21) - [Clang 6.0 (clang-600.0.57)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.9.2, Platform Darwin-18.2.0-x86_64-i386-64bit
+2020-09-01 22:06:08 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'smzdm',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': './smzdm.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'product_analysis.spiders',
+ 'SPIDER_MODULES': ['product_analysis.spiders']}
+2020-09-01 22:06:08 [scrapy.extensions.telnet] INFO: Telnet Password: ffd463634c1caf75
+2020-09-01 22:06:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-09-01 22:06:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-09-01 22:06:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-09-01 22:06:08 [scrapy.middleware] INFO: Enabled item pipelines:
+['product_analysis.pipelines.ProductAnalysisPipeline']
+2020-09-01 22:06:08 [scrapy.core.engine] INFO: Spider opened
+2020-09-01 22:06:08 [root] INFO: Connected to mysql: 127.0.0.1 on port: 3306, using db: b'db1', charset is: utf8mb4
+2020-09-01 22:06:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-09-01 22:06:08 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24440205/
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24428767/
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24427081/
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24424477/
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24411787/
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24422078/
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24418408/
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24418264/
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24416912/
+2020-09-01 22:06:09 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24416782/
+2020-09-01 22:06:10 [smzdm] INFO: 0 comments on current page
+2020-09-01 22:06:12 [smzdm] INFO: 2 comments on current page
+2020-09-01 22:06:13 [smzdm] INFO: 15 comments on current page
+2020-09-01 22:06:13 [root] INFO: Inserted 10 comments to DB.
+2020-09-01 22:06:14 [smzdm] INFO: 13 comments on current page
+2020-09-01 22:06:14 [root] INFO: Inserted 10 comments to DB.
+2020-09-01 22:06:15 [smzdm] INFO: 0 comments on current page
+2020-09-01 22:06:16 [smzdm] INFO: 3 comments on current page
+2020-09-01 22:06:16 [root] INFO: Inserted 10 comments to DB.
+2020-09-01 22:06:17 [smzdm] INFO: 2 comments on current page
+2020-09-01 22:06:18 [smzdm] INFO: 28 comments on current page
+2020-09-01 22:06:18 [root] INFO: Inserted 10 comments to DB.
+2020-09-01 22:06:18 [root] INFO: Inserted 10 comments to DB.
+2020-09-01 22:06:19 [smzdm] INFO: 0 comments on current page
+2020-09-01 22:06:20 [smzdm] INFO: 0 comments on current page
+2020-09-01 22:06:20 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-09-01 22:06:20 [root] INFO: Inserted 8 comments to DB.
+2020-09-01 22:06:20 [root] INFO: DB connection closed.
+2020-09-01 22:06:20 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 6018,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 468319,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 11,
+ 'elapsed_time_seconds': 12.092782,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 9, 1, 14, 6, 20, 613798),
+ 'item_scraped_count': 63,
+ 'log_count/INFO': 38,
+ 'memusage/max': 51908608,
+ 'memusage/startup': 51908608,
+ 'request_depth_max': 1,
+ 'response_received_count': 11,
+ 'scheduler/dequeued': 11,
+ 'scheduler/dequeued/memory': 11,
+ 'scheduler/enqueued': 11,
+ 'scheduler/enqueued/memory': 11,
+ 'start_time': datetime.datetime(2020, 9, 1, 14, 6, 8, 521016)}
+2020-09-01 22:06:20 [scrapy.core.engine] INFO: Spider closed (finished)

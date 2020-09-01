@@ -15,10 +15,10 @@ class ProductDataHandler:
         password = settings.MYSQL_PASSWORD
         db = settings.MYSQL_DB
 
-        conn = create_engine(f'mysql+pymysql://{username}:{password}@{host}:{port}/{db}')
+        self.conn = create_engine(f'mysql+pymysql://{username}:{password}@{host}:{port}/{db}')
         sql = 'SELECT * FROM product;'
 
-        self.data = pd.read_sql(sql, conn)
+        self.data = pd.read_sql(sql, self.conn)
 
     def handle_duplicate(self, data):
         """删除重复值"""
@@ -29,10 +29,13 @@ class ProductDataHandler:
         return data.dropna(subset=['user_comment']).fillna(value={'user_name': '空用户'})
 
     def just_do_it(self):
-       return self.handle_missing(self.handle_duplicate(self.data))
+        cleaned_data = self.handle_missing(self.handle_duplicate(self.data))
+        self.save_to_db(cleaned_data)
 
     def save_to_db(self, data):
-        pass
+        with self.conn.begin() as connection:
+            data.to_sql('product_cleaned', conn=connection, if_exists='replace')
+
 
 if __name__ == '__main__':
     test = ProductDataHandler()
