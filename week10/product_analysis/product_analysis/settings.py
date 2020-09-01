@@ -100,8 +100,7 @@ ITEM_PIPELINES = {
 # Set logger
 LOG_ENABLE = True
 LOG_LEVEL = 'INFO'
-LOG_FILE = '/Users/cherrychan/Documents/Documents_cc/ZhangQian/Study/Python/code/mycode/Python001-class01/week10' \
-           '/product_analysis/smzdm.log'
+LOG_FILE = './smzdm.log'
 
 # Configure DB
 MYSQL_HOST = '127.0.0.1'

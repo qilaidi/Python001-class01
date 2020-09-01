@@ -12,9 +12,8 @@
 #     -> product_name VARCHAR(128) COMMENT '产品名',
 #     -> user_name VARCHAR(128) COMMENT '用户名',
 #     -> user_comment VARCHAR(768) COMMENT '用户评论',
-#     -> create_time DATETIME COMMENT '入库时间',
-#     -> UNIQUE KEY `uk_product` (`product_name`,`user_name`, `user_comment`) USING BTREE
-#     -> ) ENGINE=INNODB DEFAULT CHARSET=utf8mb4;
+#     -> create_time DATETIME COMMENT '入库时间'
+#     -> ) DEFAULT CHARSET=utf8mb4;
 
 import scrapy
 
