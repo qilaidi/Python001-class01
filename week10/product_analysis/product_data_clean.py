@@ -4,7 +4,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 
-from week10.product_analysis.product_analysis import settings
+from product_analysis import settings
 
 
 class ProductDataHandler:
@@ -34,9 +34,10 @@ class ProductDataHandler:
 
     def save_to_db(self, data):
         with self.conn.begin() as connection:
-            data.to_sql('product_cleaned', conn=connection, if_exists='replace')
+            data.to_sql('product_cleaned', con=connection, if_exists='replace')
 
 
 if __name__ == '__main__':
     test = ProductDataHandler()
-    print(test.just_do_it().iloc[0])
+    test.just_do_it()
+    print("Done")

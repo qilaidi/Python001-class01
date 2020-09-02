@@ -6,3 +6,4 @@ cd /Users/Kernel/Documents/Documents_cc/ZhangQian/Study/Python/code/mycode/Pytho
 PATH=$PATH:/usr/local/bin
 export PATH
 scrapy crawl smzdm
+python3.7 product_data_clean.py

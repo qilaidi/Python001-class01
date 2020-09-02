@@ -1,1 +1,1 @@
-1 */8 * * *  sh /Users/Kernel/Documents/Documents_cc/ZhangQian/Study/Python/code/mycode/Python001-class01/week10/product_analysis/cron_smzdm.sh
+* * * * *  sh /Users/Kernel/Documents/Documents_cc/ZhangQian/Study/Python/code/mycode/Python001-class01/week10/product_analysis/cron_smzdm.sh
