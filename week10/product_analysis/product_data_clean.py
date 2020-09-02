@@ -32,6 +32,10 @@ class ProductDataHandler:
         cleaned_data = self.handle_missing(self.handle_duplicate(self.data))
         self.save_to_db(cleaned_data)
 
+    def sentiment_analysis(self, data):
+        return data
+
+
     def save_to_db(self, data):
         with self.conn.begin() as connection:
             data.to_sql('product_cleaned', con=connection, if_exists='replace')
