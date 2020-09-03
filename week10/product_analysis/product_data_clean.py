@@ -2,8 +2,9 @@
 # Create by zq
 # Create on 2020/9/1
 import pandas as pd
+from snownlp import SnowNLP
 from sqlalchemy import create_engine
-
+import logging
 from product_analysis import settings
 
 
@@ -29,11 +30,14 @@ class ProductDataHandler:
         return data.dropna(subset=['user_comment']).fillna(value={'user_name': '空用户'})
 
     def just_do_it(self):
-        cleaned_data = self.handle_missing(self.handle_duplicate(self.data))
+        cleaned_data = self.handle_duplicate(self.data)
+        cleaned_data = self.handle_missing(cleaned_data)
+        cleaned_data = self.sentiment_analysis(cleaned_data)
         self.save_to_db(cleaned_data)
 
     def sentiment_analysis(self, data):
-        data['sentiment'] = data['user_comment'].apply()
+        data['sentiment'] = data['user_comment'].apply(lambda x: SnowNLP(x).sentiments)
+        return data
 
 
     def save_to_db(self, data):
@@ -44,4 +48,4 @@ class ProductDataHandler:
 if __name__ == '__main__':
     test = ProductDataHandler()
     test.just_do_it()
-    print("Done")
+    print("Data cleaning & analysis sentiments Done!")
