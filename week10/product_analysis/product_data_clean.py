@@ -33,7 +33,7 @@ class ProductDataHandler:
         self.save_to_db(cleaned_data)
 
     def sentiment_analysis(self, data):
-        return data
+        data['sentiment'] = data['user_comment'].apply()
 
 
     def save_to_db(self, data):
