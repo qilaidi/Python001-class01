@@ -2,9 +2,9 @@
 # Create by zq
 # Create on 2020/9/1
 import pandas as pd
+import numpy as np
 from snownlp import SnowNLP
 from sqlalchemy import create_engine
-import logging
 from product_analysis import settings
 
 
@@ -27,7 +27,10 @@ class ProductDataHandler:
 
     def handle_missing(self, data):
         """删除评论为空的，填充用户为空"""
-        return data.dropna(subset=['user_comment']).fillna(value={'user_name': '空用户'})
+        # handle empty or blank string
+        data['isempty'] = data['user_comment'].apply(lambda x: np.nan if x.strip() == '' else 0)
+        # data.replace(to_replace=r'\s*', value=None, regex=True, inplace=True)
+        return data.dropna(subset=['user_comment', 'isempty']).fillna(value={'user_name': '空用户'})
 
     def just_do_it(self):
         cleaned_data = self.handle_duplicate(self.data)
@@ -39,10 +42,10 @@ class ProductDataHandler:
         data['sentiment'] = data['user_comment'].apply(lambda x: SnowNLP(x).sentiments)
         return data
 
-
     def save_to_db(self, data):
         with self.conn.begin() as connection:
-            data.to_sql('product_cleaned', con=connection, if_exists='replace')
+            data.to_sql('product_cleaned', con=connection, if_exists='replace', index=False, index_label='id')
+            connection.execute("""ALTER TABLE `product_cleaned` ADD PRIMARY KEY (`id`);""")
 
 
 if __name__ == '__main__':

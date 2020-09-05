@@ -99,7 +99,7 @@ ITEM_PIPELINES = {
 
 # Set logger
 LOG_ENABLE = True
-LOG_LEVEL = 'INFO'
+LOG_LEVEL = 'DEBUG'
 LOG_FILE = './smzdm.log'
 
 # Configure DB
