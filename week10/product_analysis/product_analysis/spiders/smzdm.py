@@ -23,7 +23,7 @@ class SmzdmSpider(scrapy.Spider):
                 './/h5[@class="feed-block-title"]/a/text()'
             ).extract_first()
             self.logger.debug(f"current product name is: {product_name}")
-            item['product_name'] = product_name
+            item['product_name'] = product_name.strip()
             url = product.xpath(
                 './/h5[@class="feed-block-title"]/a/@href'
             ).extract_first()
@@ -44,8 +44,8 @@ class SmzdmSpider(scrapy.Spider):
                 './div[@class="comment_conBox"]/div[@class="comment_conWrap"]/div/p/span/text()'
             ).extract())
             self.logger.debug(f"-----------------{user_name} said: {user_comment}-----------------")
-            item['user_name'] = user_name
-            item['user_comment'] = user_comment
+            item['user_name'] = user_name.strip()
+            item['user_comment'] = user_comment.strip()
             yield item
         next_page = response.xpath(
             '//*[@id="commentTabBlockNew"]/ul[@class="pagination"]/li[@class="pagedown"]/a/@href'

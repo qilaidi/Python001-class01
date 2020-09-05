@@ -23,7 +23,7 @@ class ProductDataHandler:
 
     def handle_duplicate(self, data):
         """删除重复值"""
-        return data.drop_duplicates(subset=['product_name', 'user_name', 'user_comment'], keep='last')
+        return data.apply(lambda x: x.str.strip()).drop_duplicates(subset=['product_name', 'user_name', 'user_comment'], keep='last')
 
     def handle_missing(self, data):
         """删除评论为空的，填充用户为空"""
