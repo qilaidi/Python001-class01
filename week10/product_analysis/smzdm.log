@@ -19772,3 +19772,368 @@ AttributeError: 'NoneType' object has no attribute 'strip'
  'scheduler/enqueued/memory': 11,
  'start_time': datetime.datetime(2020, 9, 6, 10, 17, 2, 137652)}
 2020-09-06 18:17:16 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-09-06 19:17:03 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: smzdm)
+2020-09-06 19:17:03 [scrapy.utils.log] INFO: Versions: lxml 4.5.2.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21) - [Clang 6.0 (clang-600.0.57)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 3.1, Platform Darwin-18.7.0-x86_64-i386-64bit
+2020-09-06 19:17:03 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2020-09-06 19:17:03 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'smzdm',
+ 'DOWNLOAD_DELAY': 1,
+ 'LOG_FILE': './smzdm.log',
+ 'NEWSPIDER_MODULE': 'product_analysis.spiders',
+ 'SPIDER_MODULES': ['product_analysis.spiders']}
+2020-09-06 19:17:03 [scrapy.extensions.telnet] INFO: Telnet Password: cd38b399081c75cb
+2020-09-06 19:17:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-09-06 19:17:03 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-09-06 19:17:03 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-09-06 19:17:03 [scrapy.middleware] INFO: Enabled item pipelines:
+['product_analysis.pipelines.ProductAnalysisPipeline']
+2020-09-06 19:17:03 [scrapy.core.engine] INFO: Spider opened
+2020-09-06 19:17:03 [root] INFO: Connected to mysql: 127.0.0.1 on port: 3306, using db: b'db1', charset is: utf8mb4
+2020-09-06 19:17:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-09-06 19:17:03 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-09-06 19:17:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/fenlei/qipaoshui/> (referer: None)
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: Perrier 巴黎水 含气天然矿泉水 塑料瓶装  500ml*24瓶/箱
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24570625/
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: 怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24567875/
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: 天地精华 气泡苏打水 330ml*20瓶
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24561169/
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: 考拉海购黑卡会员 : 黑卡用户专享Perrier 巴黎水 含气柠檬味饮料 330ml*24瓶
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24561139/
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: Perrier 巴黎水 含气天然矿泉水 330毫升 24罐
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24557970/
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: 巴黎水（Perrier）天然气泡矿泉水（原味）330ml*24罐/箱 法国进口
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24556677/
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: 巴黎水Perrier气泡水矿泉水青柠味饮料 330ml*24瓶整箱
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24550156/
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: 依能青柠味苏打水500ml*24瓶*2箱无糖弱碱性家庭家用量贩装饮用水
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24547798/
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: 雀巢蓝莓黑加仑风味无糖无热量无脂肪气泡水饮料汽水450ML*15瓶+凑单品 *3件+凑单品
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24541056/
+2020-09-06 19:17:04 [smzdm] DEBUG: current product name is: 崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱
+2020-09-06 19:17:04 [smzdm] INFO: first ten product url: https://www.smzdm.com/p/24538597/
+2020-09-06 19:17:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24570625/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:05 [smzdm] INFO: 2 comments on current page
+2020-09-06 19:17:05 [smzdm] DEBUG: -----------------加菲猫0129 said: 税费9.01呀 -----------------
+2020-09-06 19:17:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24570625/>
+{'product_name': 'Perrier 巴黎水 含气天然矿泉水 塑料瓶装  500ml*24瓶/箱',
+ 'user_comment': '税费9.01呀',
+ 'user_name': '加菲猫0129'}
+2020-09-06 19:17:05 [smzdm] DEBUG: -----------------天堂之王 said: 假货  考拉 -----------------
+2020-09-06 19:17:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24570625/>
+{'product_name': 'Perrier 巴黎水 含气天然矿泉水 塑料瓶装  500ml*24瓶/箱',
+ 'user_comment': '假货  考拉',
+ 'user_name': '天堂之王'}
+2020-09-06 19:17:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24561139/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:06 [smzdm] INFO: 4 comments on current page
+2020-09-06 19:17:06 [smzdm] DEBUG: -----------------夜的第珊章 said: 790ml 也就这个价 -----------------
+2020-09-06 19:17:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561139/>
+{'product_name': '考拉海购黑卡会员 : 黑卡用户专享Perrier 巴黎水 含气柠檬味饮料 330ml*24瓶',
+ 'user_comment': '790ml 也就这个价',
+ 'user_name': '夜的第珊章'}
+2020-09-06 19:17:06 [smzdm] DEBUG: -----------------被反撸羊毛多年 said: 不可能是假的吧！我喝了，口感完全对啊 -----------------
+2020-09-06 19:17:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561139/>
+{'product_name': '考拉海购黑卡会员 : 黑卡用户专享Perrier 巴黎水 含气柠檬味饮料 330ml*24瓶',
+ 'user_comment': '不可能是假的吧！我喝了，口感完全对啊',
+ 'user_name': '被反撸羊毛多年'}
+2020-09-06 19:17:06 [smzdm] DEBUG: -----------------天堂之王 said: 喝了就闹肚子的假货 -----------------
+2020-09-06 19:17:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561139/>
+{'product_name': '考拉海购黑卡会员 : 黑卡用户专享Perrier 巴黎水 含气柠檬味饮料 330ml*24瓶',
+ 'user_comment': '喝了就闹肚子的假货',
+ 'user_name': '天堂之王'}
+2020-09-06 19:17:06 [smzdm] DEBUG: -----------------大块头啊 said: 天猫国际三天二头83随便买不好么 -----------------
+2020-09-06 19:17:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561139/>
+{'product_name': '考拉海购黑卡会员 : 黑卡用户专享Perrier 巴黎水 含气柠檬味饮料 330ml*24瓶',
+ 'user_comment': '天猫国际三天二头83随便买不好么',
+ 'user_name': '大块头啊'}
+2020-09-06 19:17:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24561169/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:08 [smzdm] INFO: 8 comments on current page
+2020-09-06 19:17:08 [smzdm] DEBUG: -----------------鱼儿吃饼啦（爆料人） said: 感谢值友的支持   -----------------
+2020-09-06 19:17:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561169/>
+{'product_name': '天地精华 气泡苏打水 330ml*20瓶',
+ 'user_comment': '感谢值友的支持',
+ 'user_name': '鱼儿吃饼啦（爆料人）'}
+2020-09-06 19:17:08 [smzdm] DEBUG: -----------------德古拉公爵 said: 品牌溢价，高端   -----------------
+2020-09-06 19:17:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561169/>
+{'product_name': '天地精华 气泡苏打水 330ml*20瓶',
+ 'user_comment': '品牌溢价，高端',
+ 'user_name': '德古拉公爵'}
+2020-09-06 19:17:08 [smzdm] DEBUG: -----------------JoKe_Z said: 其实这货成本最低了 别的碳酸饮料都是碳酸水加东西 这货就是个纯碳酸水 不知道为啥之前屈臣氏依泉卖那么贵 -----------------
+2020-09-06 19:17:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561169/>
+{'product_name': '天地精华 气泡苏打水 330ml*20瓶',
+ 'user_comment': '其实这货成本最低了 别的碳酸饮料都是碳酸水加东西 这货就是个纯碳酸水 不知道为啥之前屈臣氏依泉卖那么贵',
+ 'user_name': 'JoKe_Z'}
+2020-09-06 19:17:08 [smzdm] DEBUG: -----------------Jaqen-Hghar said: 这价格闹呢 -----------------
+2020-09-06 19:17:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561169/>
+{'product_name': '天地精华 气泡苏打水 330ml*20瓶',
+ 'user_comment': '这价格闹呢',
+ 'user_name': 'Jaqen-Hghar'}
+2020-09-06 19:17:08 [smzdm] DEBUG: -----------------值友6774341933 said: 买了一箱，刚好喝完了，青黄柠檬一样切几片 -----------------
+2020-09-06 19:17:08 [root] DEBUG: Will insert following data: [['Perrier 巴黎水 含气天然矿泉水 塑料瓶装  500ml*24瓶/箱', '加菲猫0129', '税费9.01呀', '2020-09-06 19:17:05'], ['Perrier 巴黎水 含气天然矿泉水 塑料瓶装  500ml*24瓶/箱', '天堂之王', '假货  考拉', '2020-09-06 19:17:05'], ['考拉海购黑卡会员 : 黑卡用户专享Perrier 巴黎水 含气柠檬味饮料 330ml*24瓶', '夜的第珊章', '790ml 也就这个价', '2020-09-06 19:17:06'], ['考拉海购黑卡会员 : 黑卡用户专享Perrier 巴黎水 含气柠檬味饮料 330ml*24瓶', '被反撸羊毛多年', '不可能是假的吧！我喝了，口感完全对啊', '2020-09-06 19:17:06'], ['考拉海购黑卡会员 : 黑卡用户专享Perrier 巴黎水 含气柠檬味饮料 330ml*24瓶', '天堂之王', '喝了就闹肚子的假货', '2020-09-06 19:17:06'], ['考拉海购黑卡会员 : 黑卡用户专享Perrier 巴黎水 含气柠檬味饮料 330ml*24瓶', '大块头啊', '天猫国际三天二头83随便买不好么', '2020-09-06 19:17:06'], ['天地精华 气泡苏打水 330ml*20瓶', '鱼儿吃饼啦（爆料人）', '感谢值友的支持', '2020-09-06 19:17:08'], ['天地精华 气泡苏打水 330ml*20瓶', '德古拉公爵', '品牌溢价，高端', '2020-09-06 19:17:08'], ['天地精华 气泡苏打水 330ml*20瓶', 'JoKe_Z', '其实这货成本最低了 别的碳酸饮料都是碳酸水加东西 这货就是个纯碳酸水 不知道为啥之前屈臣氏依泉卖那么贵', '2020-09-06 19:17:08'], ['天地精华 气泡苏打水 330ml*20瓶', 'Jaqen-Hghar', '这价格闹呢', '2020-09-06 19:17:08']]
+2020-09-06 19:17:08 [root] INFO: Inserted 10 comments to DB.
+2020-09-06 19:17:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561169/>
+{'product_name': '天地精华 气泡苏打水 330ml*20瓶',
+ 'user_comment': '买了一箱，刚好喝完了，青黄柠檬一样切几片',
+ 'user_name': '值友6774341933'}
+2020-09-06 19:17:08 [smzdm] DEBUG: -----------------德古拉公爵 said: 好价1块钱1瓶 -----------------
+2020-09-06 19:17:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561169/>
+{'product_name': '天地精华 气泡苏打水 330ml*20瓶',
+ 'user_comment': '好价1块钱1瓶',
+ 'user_name': '德古拉公爵'}
+2020-09-06 19:17:08 [smzdm] DEBUG: -----------------值友4084037971 said: 做人不能这样底线都没有了   -----------------
+2020-09-06 19:17:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561169/>
+{'product_name': '天地精华 气泡苏打水 330ml*20瓶',
+ 'user_comment': '做人不能这样底线都没有了',
+ 'user_name': '值友4084037971'}
+2020-09-06 19:17:08 [smzdm] DEBUG: -----------------德古拉公爵 said: 1块钱1评 -----------------
+2020-09-06 19:17:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24561169/>
+{'product_name': '天地精华 气泡苏打水 330ml*20瓶',
+ 'user_comment': '1块钱1评',
+ 'user_name': '德古拉公爵'}
+2020-09-06 19:17:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24567875/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:09 [smzdm] INFO: 6 comments on current page
+2020-09-06 19:17:09 [smzdm] DEBUG: -----------------一些事And一些情 said: 这个一直到处没货的 -----------------
+2020-09-06 19:17:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24567875/>
+{'product_name': '怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶',
+ 'user_comment': '这个一直到处没货的',
+ 'user_name': '一些事And一些情'}
+2020-09-06 19:17:09 [smzdm] DEBUG: -----------------John_Zh said: 卸载京东，每次怡泉的活动都没福建的事 -----------------
+2020-09-06 19:17:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24567875/>
+{'product_name': '怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶',
+ 'user_comment': '卸载京东，每次怡泉的活动都没福建的事',
+ 'user_name': 'John_Zh'}
+2020-09-06 19:17:09 [smzdm] DEBUG: -----------------留下那个饼 said: 昨天还是29呢 -----------------
+2020-09-06 19:17:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24567875/>
+{'product_name': '怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶',
+ 'user_comment': '昨天还是29呢',
+ 'user_name': '留下那个饼'}
+2020-09-06 19:17:09 [smzdm] DEBUG: -----------------值友3847964087 said: 不可能的吧 -----------------
+2020-09-06 19:17:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24567875/>
+{'product_name': '怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶',
+ 'user_comment': '不可能的吧',
+ 'user_name': '值友3847964087'}
+2020-09-06 19:17:09 [smzdm] DEBUG: -----------------小卖店店长 said: 这东西进价就七八毛   -----------------
+2020-09-06 19:17:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24567875/>
+{'product_name': '怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶',
+ 'user_comment': '这东西进价就七八毛',
+ 'user_name': '小卖店店长'}
+2020-09-06 19:17:09 [smzdm] DEBUG: -----------------nirvena said: 高于9.9都点不值 -----------------
+2020-09-06 19:17:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24567875/>
+{'product_name': '怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶',
+ 'user_comment': '高于9.9都点不值',
+ 'user_name': 'nirvena'}
+2020-09-06 19:17:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24541056/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:11 [smzdm] INFO: 1 comments on current page
+2020-09-06 19:17:11 [smzdm] DEBUG: -----------------joycejoy said: 不大好喝，气不是很足 -----------------
+2020-09-06 19:17:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24541056/>
+{'product_name': '雀巢蓝莓黑加仑风味无糖无热量无脂肪气泡水饮料汽水450ML*15瓶+凑单品 *3件+凑单品',
+ 'user_comment': '不大好喝，气不是很足',
+ 'user_name': 'joycejoy'}
+2020-09-06 19:17:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24547798/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:12 [smzdm] INFO: 2 comments on current page
+2020-09-06 19:17:12 [smzdm] DEBUG: -----------------ACupBoy said: 高于一块二一瓶不值得 -----------------
+2020-09-06 19:17:12 [root] DEBUG: Will insert following data: [['天地精华 气泡苏打水 330ml*20瓶', '德古拉公爵', '好价1块钱1瓶', '2020-09-06 19:17:08'], ['天地精华 气泡苏打水 330ml*20瓶', '值友4084037971', '做人不能这样底线都没有了', '2020-09-06 19:17:08'], ['天地精华 气泡苏打水 330ml*20瓶', '德古拉公爵', '1块钱1评', '2020-09-06 19:17:08'], ['怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶', '一些事And一些情', '这个一直到处没货的', '2020-09-06 19:17:09'], ['怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶', 'John_Zh', '卸载京东，每次怡泉的活动都没福建的事', '2020-09-06 19:17:09'], ['怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶', '留下那个饼', '昨天还是29呢', '2020-09-06 19:17:09'], ['怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶', '值友3847964087', '不可能的吧', '2020-09-06 19:17:09'], ['怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶', '小卖店店长', '这东西进价就七八毛', '2020-09-06 19:17:09'], ['怡泉 Schweppes 无糖零卡 苏打水 汽水饮料 400ml*12瓶', 'nirvena', '高于9.9都点不值', '2020-09-06 19:17:09'], ['雀巢蓝莓黑加仑风味无糖无热量无脂肪气泡水饮料汽水450ML*15瓶+凑单品 *3件+凑单品', 'joycejoy', '不大好喝，气不是很足', '2020-09-06 19:17:11']]
+2020-09-06 19:17:12 [root] INFO: Inserted 10 comments to DB.
+2020-09-06 19:17:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24547798/>
+{'product_name': '依能青柠味苏打水500ml*24瓶*2箱无糖弱碱性家庭家用量贩装饮用水',
+ 'user_comment': '高于一块二一瓶不值得',
+ 'user_name': 'ACupBoy'}
+2020-09-06 19:17:12 [smzdm] DEBUG: -----------------值友5455818747 said: 这玩意天猫超市经常一元一瓶 -----------------
+2020-09-06 19:17:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24547798/>
+{'product_name': '依能青柠味苏打水500ml*24瓶*2箱无糖弱碱性家庭家用量贩装饮用水',
+ 'user_comment': '这玩意天猫超市经常一元一瓶',
+ 'user_name': '值友5455818747'}
+2020-09-06 19:17:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24550156/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:13 [smzdm] INFO: 1 comments on current page
+2020-09-06 19:17:13 [smzdm] DEBUG: -----------------值友7993237663 said: 上次才70 -----------------
+2020-09-06 19:17:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24550156/>
+{'product_name': '巴黎水Perrier气泡水矿泉水青柠味饮料 330ml*24瓶整箱',
+ 'user_comment': '上次才70',
+ 'user_name': '值友7993237663'}
+2020-09-06 19:17:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24556677/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:14 [smzdm] INFO: 4 comments on current page
+2020-09-06 19:17:14 [smzdm] DEBUG: -----------------mugulover（爆料人） said: 330ml 80块还好吧？任性付如果有激活还可以减10块。我下面也写了算好价。刚需就入呗。 -----------------
+2020-09-06 19:17:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24556677/>
+{'product_name': '巴黎水（Perrier）天然气泡矿泉水（原味）330ml*24罐/箱 法国进口',
+ 'user_comment': '330ml 80块还好吧？任性付如果有激活还可以减10块。我下面也写了算好价。刚需就入呗。',
+ 'user_name': 'mugulover（爆料人）'}
+2020-09-06 19:17:14 [smzdm] DEBUG: -----------------值友3070283368 said: 罐装瓶装有区别吗… -----------------
+2020-09-06 19:17:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24556677/>
+{'product_name': '巴黎水（Perrier）天然气泡矿泉水（原味）330ml*24罐/箱 法国进口',
+ 'user_comment': '罐装瓶装有区别吗…',
+ 'user_name': '值友3070283368'}
+2020-09-06 19:17:14 [smzdm] DEBUG: -----------------ntsu66 said: 24罐80块还好意思叫特价？苏宁完蛋了。 -----------------
+2020-09-06 19:17:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24556677/>
+{'product_name': '巴黎水（Perrier）天然气泡矿泉水（原味）330ml*24罐/箱 法国进口',
+ 'user_comment': '24罐80块还好意思叫特价？苏宁完蛋了。',
+ 'user_name': 'ntsu66'}
+2020-09-06 19:17:14 [smzdm] DEBUG: -----------------小冰 said: 很不错的矿泉水 -----------------
+2020-09-06 19:17:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24556677/>
+{'product_name': '巴黎水（Perrier）天然气泡矿泉水（原味）330ml*24罐/箱 法国进口',
+ 'user_comment': '很不错的矿泉水',
+ 'user_name': '小冰'}
+2020-09-06 19:17:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24557970/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:15 [smzdm] INFO: 5 comments on current page
+2020-09-06 19:17:15 [smzdm] DEBUG: -----------------值友5783465050 said: 大哥，10元5包的中华，我也觉得贵 -----------------
+2020-09-06 19:17:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24557970/>
+{'product_name': 'Perrier 巴黎水 含气天然矿泉水 330毫升 24罐',
+ 'user_comment': '大哥，10元5包的中华，我也觉得贵',
+ 'user_name': '值友5783465050'}
+2020-09-06 19:17:15 [smzdm] DEBUG: -----------------值友6804242482 said: 看到70块以上的巴黎水我都会误以为两件   -----------------
+2020-09-06 19:17:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24557970/>
+{'product_name': 'Perrier 巴黎水 含气天然矿泉水 330毫升 24罐',
+ 'user_comment': '看到70块以上的巴黎水我都会误以为两件',
+ 'user_name': '值友6804242482'}
+2020-09-06 19:17:15 [smzdm] DEBUG: -----------------值友5321843480 said: 易拉罐的味道比玻璃瓶的淡多了，还不如屈臣氏，要买就买玻璃瓶的 -----------------
+2020-09-06 19:17:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24557970/>
+{'product_name': 'Perrier 巴黎水 含气天然矿泉水 330毫升 24罐',
+ 'user_comment': '易拉罐的味道比玻璃瓶的淡多了，还不如屈臣氏，要买就买玻璃瓶的',
+ 'user_name': '值友5321843480'}
+2020-09-06 19:17:15 [smzdm] DEBUG: -----------------秋风扫辣条 said: 前排等一个大佬 -----------------
+2020-09-06 19:17:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24557970/>
+{'product_name': 'Perrier 巴黎水 含气天然矿泉水 330毫升 24罐',
+ 'user_comment': '前排等一个大佬',
+ 'user_name': '秋风扫辣条'}
+2020-09-06 19:17:15 [smzdm] DEBUG: -----------------Aaron8 said: 普通用户不能享受79的价格。 -----------------
+2020-09-06 19:17:15 [root] DEBUG: Will insert following data: [['依能青柠味苏打水500ml*24瓶*2箱无糖弱碱性家庭家用量贩装饮用水', '值友5455818747', '这玩意天猫超市经常一元一瓶', '2020-09-06 19:17:12'], ['巴黎水Perrier气泡水矿泉水青柠味饮料 330ml*24瓶整箱', '值友7993237663', '上次才70', '2020-09-06 19:17:13'], ['巴黎水（Perrier）天然气泡矿泉水（原味）330ml*24罐/箱 法国进口', 'mugulover（爆料人）', '330ml 80块还好吧？任性付如果有激活还可以减10块。我下面也写了算好价。刚需就入呗。', '2020-09-06 19:17:14'], ['巴黎水（Perrier）天然气泡矿泉水（原味）330ml*24罐/箱 法国进口', '值友3070283368', '罐装瓶装有区别吗…', '2020-09-06 19:17:14'], ['巴黎水（Perrier）天然气泡矿泉水（原味）330ml*24罐/箱 法国进口', 'ntsu66', '24罐80块还好意思叫特价？苏宁完蛋了。', '2020-09-06 19:17:14'], ['巴黎水（Perrier）天然气泡矿泉水（原味）330ml*24罐/箱 法国进口', '小冰', '很不错的矿泉水', '2020-09-06 19:17:14'], ['Perrier 巴黎水 含气天然矿泉水 330毫升 24罐', '值友5783465050', '大哥，10元5包的中华，我也觉得贵', '2020-09-06 19:17:15'], ['Perrier 巴黎水 含气天然矿泉水 330毫升 24罐', '值友6804242482', '看到70块以上的巴黎水我都会误以为两件', '2020-09-06 19:17:15'], ['Perrier 巴黎水 含气天然矿泉水 330毫升 24罐', '值友5321843480', '易拉罐的味道比玻璃瓶的淡多了，还不如屈臣氏，要买就买玻璃瓶的', '2020-09-06 19:17:15'], ['Perrier 巴黎水 含气天然矿泉水 330毫升 24罐', '秋风扫辣条', '前排等一个大佬', '2020-09-06 19:17:15']]
+2020-09-06 19:17:15 [root] INFO: Inserted 10 comments to DB.
+2020-09-06 19:17:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24557970/>
+{'product_name': 'Perrier 巴黎水 含气天然矿泉水 330毫升 24罐',
+ 'user_comment': '普通用户不能享受79的价格。',
+ 'user_name': 'Aaron8'}
+2020-09-06 19:17:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.smzdm.com/p/24538597/> (referer: https://www.smzdm.com/fenlei/qipaoshui/)
+2020-09-06 19:17:16 [smzdm] INFO: 17 comments on current page
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------秋来九月 said: 冰镇后我觉得也挺好喝的 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '冰镇后我觉得也挺好喝的',
+ 'user_name': '秋来九月'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------佩萨雷西 said: 我来拯救大家。这破玩意喝起来像尿一样。口味稍微挑剔的千万别买。前面瓶装的买了两件。家人尝一口都不喝了。现在留给我一个人解决。不知道喝到什么时候去了。每次喝的时候都只能安慰自己，一瓶没多少，慢慢来   -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '我来拯救大家。这破玩意喝起来像尿一样。口味稍微挑剔的千万别买。前面瓶装的买了两件。家人尝一口都不喝了。现在留给我一个人解决。不知道喝到什么时候去了。每次喝的时候都只能安慰自己，一瓶没多少，慢慢来',
+ 'user_name': '佩萨雷西'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------鸡肉丸人 said: 不是煮凉席味儿吗 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '不是煮凉席味儿吗',
+ 'user_name': '鸡肉丸人'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------bzbz said: 替代啤酒的选择 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '替代啤酒的选择',
+ 'user_name': 'bzbz'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------刺客的坚果 said: 个把月前抱着尝试的心态买了八瓶…实在接受不了这味道，哈哈 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '个把月前抱着尝试的心态买了八瓶…实在接受不了这味道，哈哈',
+ 'user_name': '刺客的坚果'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------时间积木 said: 上次买的算下来1.41，这个算下来3.73 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '上次买的算下来1.41，这个算下来3.73',
+ 'user_name': '时间积木'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------ENLAK said: 其实我觉得挺好喝 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '其实我觉得挺好喝',
+ 'user_name': 'ENLAK'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------DREAMERDONG said: 托……这有什么可值的  太夸张了  托成风么 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '托……这有什么可值的  太夸张了  托成风么',
+ 'user_name': 'DREAMERDONG'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------DREAMERDONG said: 这么多值的那倒不是托？这有什么可值的     -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '这么多值的那倒不是托？这有什么可值的',
+ 'user_name': 'DREAMERDONG'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------我早餐吃饺子 said: 值在哪里？！ -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '值在哪里？！',
+ 'user_name': '我早餐吃饺子'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------值友3533427531 said: 黑松沙士第一口很难喝，第二口就习惯了，许久不喝，还会想念。。。这玩意。。。 -----------------
+2020-09-06 19:17:16 [root] DEBUG: Will insert following data: [['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '秋来九月', '冰镇后我觉得也挺好喝的', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '佩萨雷西', '我来拯救大家。这破玩意喝起来像尿一样。口味稍微挑剔的千万别买。前面瓶装的买了两件。家人尝一口都不喝了。现在留给我一个人解决。不知道喝到什么时候去了。每次喝的时候都只能安慰自己，一瓶没多少，慢慢来', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '鸡肉丸人', '不是煮凉席味儿吗', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', 'bzbz', '替代啤酒的选择', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '刺客的坚果', '个把月前抱着尝试的心态买了八瓶…实在接受不了这味道，哈哈', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '时间积木', '上次买的算下来1.41，这个算下来3.73', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', 'ENLAK', '其实我觉得挺好喝', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', 'DREAMERDONG', '托……这有什么可值的  太夸张了  托成风么', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', 'DREAMERDONG', '这么多值的那倒不是托？这有什么可值的', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '我早餐吃饺子', '值在哪里？！', '2020-09-06 19:17:16']]
+2020-09-06 19:17:16 [root] INFO: Inserted 10 comments to DB.
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '黑松沙士第一口很难喝，第二口就习惯了，许久不喝，还会想念。。。这玩意。。。',
+ 'user_name': '值友3533427531'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------值友7901439727 said: 因难喝而闻名 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '因难喝而闻名',
+ 'user_name': '值友7901439727'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------parkmoon said: 味道还可以 比黑松沙士好喝多了 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '味道还可以 比黑松沙士好喝多了',
+ 'user_name': 'parkmoon'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------bz16179 said: 觉得还好 就是贵了 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '觉得还好 就是贵了',
+ 'user_name': 'bz16179'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------重楼 said: 就8瓶，还好还好 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '就8瓶，还好还好',
+ 'user_name': '重楼'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------特长害队友 said: 我买了，其实还好，它不加二氧化碳就更好了，就是刚入口有点像凉粉的味道，之后就是水的味道啊  个人还是比较可以接受的 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '我买了，其实还好，它不加二氧化碳就更好了，就是刚入口有点像凉粉的味道，之后就是水的味道啊  个人还是比较可以接受的',
+ 'user_name': '特长害队友'}
+2020-09-06 19:17:16 [smzdm] DEBUG: -----------------禧卬 said: 虽然难以下咽，但是还要点值！  蒙蔽那些还没喝过的朋友 -----------------
+2020-09-06 19:17:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.smzdm.com/p/24538597/>
+{'product_name': '崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱',
+ 'user_comment': '虽然难以下咽，但是还要点值！  蒙蔽那些还没喝过的朋友',
+ 'user_name': '禧卬'}
+2020-09-06 19:17:16 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-09-06 19:17:16 [root] DEBUG: Will insert following data: [['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '值友7901439727', '因难喝而闻名', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', 'parkmoon', '味道还可以 比黑松沙士好喝多了', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', 'bz16179', '觉得还好 就是贵了', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '重楼', '就8瓶，还好还好', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '特长害队友', '我买了，其实还好，它不加二氧化碳就更好了，就是刚入口有点像凉粉的味道，之后就是水的味道啊  个人还是比较可以接受的', '2020-09-06 19:17:16'], ['崂山白花蛇草水330ml*8瓶 健康饮料矿泉水气泡水百花舌蛇草水整箱', '禧卬', '虽然难以下咽，但是还要点值！  蒙蔽那些还没喝过的朋友', '2020-09-06 19:17:16']]
+2020-09-06 19:17:16 [root] INFO: Inserted 6 comments to DB.
+2020-09-06 19:17:16 [root] INFO: DB connection closed.
+2020-09-06 19:17:17 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 13538,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 456741,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 11,
+ 'elapsed_time_seconds': 13.394125,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 9, 6, 11, 17, 16, 988467),
+ 'item_scraped_count': 50,
+ 'log_count/DEBUG': 126,
+ 'log_count/INFO': 37,
+ 'memusage/max': 51679232,
+ 'memusage/startup': 51679232,
+ 'request_depth_max': 1,
+ 'response_received_count': 11,
+ 'scheduler/dequeued': 11,
+ 'scheduler/dequeued/memory': 11,
+ 'scheduler/enqueued': 11,
+ 'scheduler/enqueued/memory': 11,
+ 'start_time': datetime.datetime(2020, 9, 6, 11, 17, 3, 594342)}
+2020-09-06 19:17:17 [scrapy.core.engine] INFO: Spider closed (finished)
