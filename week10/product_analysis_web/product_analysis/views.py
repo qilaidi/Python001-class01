@@ -1,11 +1,8 @@
-from django.db.models import Avg, Count
+from django.db.models import Avg
 from django.shortcuts import render
 
 # Create your views here.
 from .models import ProductCleaned
-
-STAR = {}
-
 
 def qipaoshui(request):
     ## 取出数据库内容
@@ -19,10 +16,6 @@ def qipaoshui(request):
     ## 负向数量
     minus = contents.filter(sentiment__lt=0.5).count()
     page_name = '气泡水'
-    print(contents[0].create_time)
 
     return render(request, 'result.html', locals())
 
-
-def login(request):
-    return render(request, 'tables.html', locals())

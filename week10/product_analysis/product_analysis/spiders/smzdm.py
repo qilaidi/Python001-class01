@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import scrapy
-import logging
 
 from ..items import ProductAnalysisItem
 
