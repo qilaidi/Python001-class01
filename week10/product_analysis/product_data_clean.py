@@ -23,14 +23,18 @@ class ProductDataHandler:
 
     def handle_duplicate(self, data):
         """删除重复值"""
-        return data.apply(lambda x: x.str.strip()).drop_duplicates(subset=['product_name', 'user_name', 'user_comment'], keep='last')
+        # handle empty or blank string
+        data['user_comment'] = data['user_comment'].str.strip()
+        data.drop(data[data['user_comment'] == ''].index, inplace=True)
+        # drop duplicate
+        return data.drop_duplicates(subset=['product_name', 'user_name', 'user_comment'], keep='last')
 
     def handle_missing(self, data):
         """删除评论为空的，填充用户为空"""
-        # handle empty or blank string
-        data['isempty'] = data['user_comment'].apply(lambda x: np.nan if x.strip() == '' else 0)
-        # data.replace(to_replace=r'\s*', value=None, regex=True, inplace=True)
-        return data.dropna(subset=['user_comment', 'isempty']).fillna(value={'user_name': '空用户'})
+
+        # data['isempty'] = data['user_comment'].apply(lambda x: np.nan if x.strip() == '' else 0)
+        # print(data)
+        return data.dropna(subset=['user_comment']).fillna(value={'user_name': '空用户'})
 
     def just_do_it(self):
         cleaned_data = self.handle_duplicate(self.data)
