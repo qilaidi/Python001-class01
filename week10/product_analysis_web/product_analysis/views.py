@@ -19,6 +19,7 @@ def qipaoshui(request):
     ## 负向数量
     minus = contents.filter(sentiment__lt=0.5).count()
     page_name = '气泡水'
+    print(contents[0].create_time)
 
     return render(request, 'result.html', locals())
 

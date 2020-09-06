@@ -95,6 +95,7 @@
                                         <th>用户名</th>
                                         <th>评论</th>
                                         <th>情感倾向</th>
+                                        <th>记录时间</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -104,6 +105,7 @@
                                             <td>{{content.user_name}}</td>
                                             <td>{{content.user_comment}}</td>
                                             <td>{{content.sentiment|floatformat:2}}</td>
+                                            <td width="17%">{{content.create_time|date:"Y-m-d H:i:s"}}</td>
                                         </tr>
                                     {% endfor %}
                                 </tbody>
